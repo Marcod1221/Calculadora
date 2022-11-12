@@ -1,0 +1,23 @@
+<br><br><br><br>
+<main class="form-signin">
+    <form [formGroup]="marcaje" (ngSubmit)="onSubmit()">
+      <h1 class="h3 mb-3 fw-normal">Calculadora</h1>
+
+      <div class="form-floating">
+        <input type="text" name="distancia" class="form-control"
+        id="distancia" placeholder="distancia" formControlName="distancia" required>
+        <label for="floatingPassword">Distancia</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="text" name="hora" class="form-control"
+        id="text" placeholder="hora" formControlName="hora" required>
+        <label for="floatingInput">Hora</label>
+      </div>
+
+      <button type="submit" class="w-100 btn btn-lg btn-primary" [disabled]
+      ="!marcaje.valid">Calcular</button>
+    
+    </form>
+</main>
+

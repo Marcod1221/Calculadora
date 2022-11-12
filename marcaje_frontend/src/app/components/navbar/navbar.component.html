@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a routerLink="/" class="navbar-brand">Inicio</a>
+
+      <div>
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+          <li class="nav-item">
+            <a routerLink="/login" class="nav-link" *ngIf="!loggedIn">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a routerLink="/profile" class="nav-link" *ngIf="loggedIn">Perfil</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" (click)="logout($event)" class="nav-link" *ngIf="loggedIn">Cerrar Sesion</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
